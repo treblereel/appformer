@@ -44,7 +44,7 @@
 
     <dependency>
       <groupId>org.uberfire</groupId>
-      <artifactId>uberfire-security-client-backend</artifactId>
+      <artifactId>uberfire-security-client</artifactId>
       <scope>provided</scope>
     </dependency>
 
