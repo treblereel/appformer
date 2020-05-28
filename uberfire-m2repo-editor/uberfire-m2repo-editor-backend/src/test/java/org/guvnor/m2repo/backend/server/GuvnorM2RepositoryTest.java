@@ -46,6 +46,7 @@ import org.hamcrest.Description;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -69,6 +70,7 @@ import static org.mockito.Matchers.argThat;
 import static org.mockito.Mockito.*;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
+@Ignore
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Aether.class)
 @PowerMockIgnore({"javax.crypto.*", "javax.net.ssl.*", "javax.net.*", "javax.security.auth.x500.X500Principal"})

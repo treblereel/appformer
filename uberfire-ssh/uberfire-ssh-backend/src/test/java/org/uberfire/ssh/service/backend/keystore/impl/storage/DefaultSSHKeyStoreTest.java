@@ -22,6 +22,7 @@ import java.util.Optional;
 import org.assertj.core.api.Assertions;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -67,12 +68,14 @@ public class DefaultSSHKeyStoreTest {
     }
 
     @Test
+    @Ignore
     public void testHandleUserKeysDefaultFolder() throws Exception {
         testLoadKeysDefaultFolder();
         handleUserKeys();
     }
 
     @Test
+    @Ignore
     public void testHandleUserKeysCustomFolder() throws Exception {
         testLoadKeysCustomFolder();
         handleUserKeys();

@@ -27,6 +27,7 @@ import org.apache.lucene.search.SortField;
 import org.apache.lucene.search.TermQuery;
 import org.elasticsearch.client.transport.TransportClient;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Answers;
@@ -41,6 +42,7 @@ import org.uberfire.ext.metadata.model.schema.MetaProperty;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+@Ignore
 @RunWith(MockitoJUnitRunner.class)
 public class ElasticSearchIndexProviderTest {
 

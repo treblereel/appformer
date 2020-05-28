@@ -26,6 +26,7 @@ import org.jboss.byteman.contrib.bmunit.BMScript;
 import org.jboss.byteman.contrib.bmunit.BMUnitConfig;
 import org.jboss.byteman.contrib.bmunit.BMUnitRunner;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.uberfire.java.nio.file.NoSuchFileException;
@@ -35,6 +36,7 @@ import org.uberfire.java.nio.fs.jgit.util.commands.CreateRepository;
 
 import static org.junit.Assert.*;
 
+@Ignore
 @RunWith(BMUnitRunner.class)
 @BMUnitConfig(loadDirectory = "target/test-classes", debug = true) // set "debug=true to see debug output
 public class ConcurrentJGitUtilTest extends AbstractTestInfra {

@@ -53,6 +53,7 @@
     <uberfire.version>${project.version}</uberfire.version>
     <version.org.kie.soup>${version.org.kie}</version.org.kie.soup>
     <version.org.apache.tomcat>7.0.61</version.org.apache.tomcat>
+    <maven.compiler.target></maven.compiler.target>
     <version.org.webjars.bower.org.patternfly>3.18.1</version.org.webjars.bower.org.patternfly>
     <version.org.webjars.bower.google-code-prettify>1.0.4</version.org.webjars.bower.google-code-prettify>
     <version.org.webjars.bower.bootstrap-select>1.10.0</version.org.webjars.bower.bootstrap-select>
@@ -75,7 +76,7 @@
     <version.org.webjars.bower.d3geoprojection>2.5.1</version.org.webjars.bower.d3geoprojection>
     <version.org.webjars.bower.jqueryui>1.12.1</version.org.webjars.bower.jqueryui>
 
-    <version.org.jboss.byteman>3.0.10</version.org.jboss.byteman>
+    <version.org.jboss.byteman>4.0.10</version.org.jboss.byteman>
     <version.org.jboss.jboss-msc>1.2.7.SP1</version.org.jboss.jboss-msc>
 
     <version.org.apache.activemq.artemis>2.3.0</version.org.apache.activemq.artemis>
@@ -163,8 +164,8 @@
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-	  <artifactId>maven-enforcer-plugin</artifactId>
-	  <version>${version.enforcer.plugin}</version>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${version.enforcer.plugin}</version>
           <dependencies>
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
@@ -293,6 +294,14 @@
               </configuration>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+          <configuration>
+            <release>8</release>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1374,16 +1383,16 @@
         <scope>test</scope>
       </dependency>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${version.junit}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.assertj</groupId>
-      <artifactId>assertj-core</artifactId>
-      <version>${version.org.assertj}</version>
-    </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${version.junit}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>${version.org.assertj}</version>
+      </dependency>
 
     </dependencies>
   </dependencyManagement>

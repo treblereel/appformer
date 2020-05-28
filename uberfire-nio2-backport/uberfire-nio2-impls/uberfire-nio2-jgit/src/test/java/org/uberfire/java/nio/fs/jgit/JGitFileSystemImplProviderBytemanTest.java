@@ -53,6 +53,7 @@ import static org.junit.Assert.*;
 import static org.uberfire.java.nio.fs.jgit.JGitFileSystemProviderConfiguration.JGIT_CACHE_EVICT_THRESHOLD_DURATION;
 import static org.uberfire.java.nio.fs.jgit.JGitFileSystemProviderConfiguration.JGIT_CACHE_EVICT_THRESHOLD_TIME_UNIT;
 
+@Ignore
 @RunWith(org.jboss.byteman.contrib.bmunit.BMUnitRunner.class)
 @BMUnitConfig(loadDirectory = "target/test-classes", debug = true) // set "debug=true to see debug output
 public class JGitFileSystemImplProviderBytemanTest extends AbstractTestInfra {
