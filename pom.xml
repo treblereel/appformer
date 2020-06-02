@@ -50,6 +50,11 @@
   </licenses>
 
   <properties>
+    <version.org.jboss.errai>4.8.0-SNAPSHOT</version.org.jboss.errai>
+    <version.com.google.gwt>2.9.0</version.com.google.gwt>
+    <version.com.google.jsinterop.annotations>2.0.0</version.com.google.jsinterop.annotations>
+    <version.org.ow2.asm>7.1</version.org.ow2.asm>
+
     <uberfire.version>${project.version}</uberfire.version>
     <version.org.kie.soup>${version.org.kie}</version.org.kie.soup>
     <version.org.apache.tomcat>7.0.61</version.org.apache.tomcat>
