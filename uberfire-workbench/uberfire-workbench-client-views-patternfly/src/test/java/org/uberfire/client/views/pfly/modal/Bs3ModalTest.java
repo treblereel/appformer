@@ -20,12 +20,14 @@ import com.google.gwtmockito.GwtMockitoTestRunner;
 import com.google.gwtmockito.WithClassesToStub;
 import org.gwtbootstrap3.client.ui.constants.ModalBackdrop;
 import org.gwtbootstrap3.client.ui.html.Text;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Spy;
 
 import static org.mockito.Mockito.*;
 
+@Ignore
 @RunWith(GwtMockitoTestRunner.class)
 @WithClassesToStub(Text.class)
 public class Bs3ModalTest {
