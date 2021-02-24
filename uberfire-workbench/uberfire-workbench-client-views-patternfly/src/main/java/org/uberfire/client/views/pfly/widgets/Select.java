@@ -22,6 +22,7 @@ import javax.inject.Inject;
 
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.user.client.TakesValue;
+import jsinterop.base.Js;
 import org.jboss.errai.common.client.api.IsElement;
 import org.jboss.errai.common.client.dom.Document;
 import org.jboss.errai.common.client.dom.HTMLElement;
@@ -147,36 +148,46 @@ public class Select implements IsElement,
         select.setAttribute("data-width", width);
     }
 
+    SelectPicker selectPicker;
+
     public void init(){
         selectpicker(select);
+
+        selectPicker = SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select));
     }
 
-    private native void refreshElement(final HTMLElement e) /*-{
-        $wnd.jQuery(e).selectpicker('refresh');
-    }-*/;
+    private void refreshElement(final HTMLElement e) {
+        SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select)).selectpicker("refresh");
+    }
 
-    private native void setValue(final HTMLElement e,
-                                 final String value) /*-{
-        $wnd.jQuery(e).selectpicker('val', value);
-    }-*/;
+    private void setValue(final HTMLElement e,
+                                 final String value) {
+        SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select)).selectpicker("val", value);
+    }
 
-    private native void disable(final HTMLElement e) /*-{
-        $wnd.jQuery(e).prop('disabled', true);
-    }-*/;
+    private void disable(final HTMLElement e) {
+        SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select)).prop("disabled", true);
+    }
 
-    private native void enable(final HTMLElement e) /*-{
-        $wnd.jQuery(e).prop('disabled', false);
-    }-*/;
+    private void enable(final HTMLElement e) {
+        SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select)).prop("disabled", false);
+    }
 
-    private native void removeAllOptions(final HTMLElement e) /*-{
+    private void removeAllOptions(final HTMLElement e) {
+        throw new Error();
+    }/*-{
         $wnd.jQuery(e).find('option').remove();
     }-*/;
 
-    private native void selectpicker(final HTMLElement e) /*-{
+    private void selectpicker(final HTMLElement e) {
+        SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select));
+    }/*-{
         $wnd.jQuery(e).selectpicker();
     }-*/;
 
-    private native void selectpicker(final HTMLElement e, final String method) /*-{
+    private void selectpicker(final HTMLElement e, final String method) {
+        SelectPicker.jQuery(Js.<com.google.gwt.dom.client.Element>uncheckedCast(select)).selectpicker(method);
+    }/*-{
         $wnd.jQuery(e).selectpicker(method);
     }-*/;
 

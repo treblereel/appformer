@@ -31,7 +31,10 @@
   <name>Uberfire Wires :: Core</name>
 
   <modules>
+    <module>uberfire-wires-core-api</module>
+    <module>uberfire-wires-core-client</module>
     <module>uberfire-wires-core-grids</module>
+    <module>uberfire-wires-core-trees</module>
   </modules>
 
 </project>

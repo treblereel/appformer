@@ -847,6 +847,7 @@
     <module>appformer-client-api</module>
     <module>appformer-kogito-bridge</module>
     <module>appformer-js-monaco</module>
+    <module>uberfire-testing-utils</module>
   </modules>
 
   <dependencyManagement>
