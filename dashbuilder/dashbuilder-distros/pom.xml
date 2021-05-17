@@ -89,11 +89,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.jboss.spec.javax.servlet.jstl</groupId>
-      <artifactId>jboss-jstl-api_1.2_spec</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>jakarta.annotation</groupId>
       <artifactId>jakarta.annotation-api</artifactId>
     </dependency>
@@ -106,6 +101,10 @@
         <exclusion>
           <groupId>org.jboss.spec.javax.annotation</groupId>
           <artifactId>jboss-annotations-api_1.3_spec</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.jboss.spec.javax.ws.rs</groupId>
+          <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
         </exclusion>
         <exclusion>
           <groupId>javax.annotation</groupId>
